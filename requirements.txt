@@ -4,4 +4,4 @@ matplotlib
 scikit-learn
 xgboost
 joblib
-jupyte
+jupyter
