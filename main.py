@@ -28,7 +28,9 @@ print(df["Churn"].value_counts())
 df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors='coerce')
 df.dropna(inplace=True)
 
-df =pd.get_dummies(df, drop_first=True)
+df = df.drop("customerID", axis=1)
+
+df = pd.get_dummies(df, drop_first=True)
 
 X = df.drop('Churn_Yes', axis=1)
 y = df['Churn_Yes']
